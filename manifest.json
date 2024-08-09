@@ -4,7 +4,9 @@
   "version": "1.0",
   "description": "Shows otodom.pl hidden info",
   "permissions": [
-    "storage"
+    "storage",
+    "scripting",
+        "activeTab"
   ],
   "options_page": "options.html",
   "options_ui": {

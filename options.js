@@ -9,9 +9,15 @@ const saveOptions = () => {
     }
     chrome.storage.sync.set(
       { addedDate: addedDate, modDate: modDate, days: days, maxDays: maxDays, position: position },
-      () => {
+      async () => {
         const status = document.getElementById('status');
         status.textContent = 'Options saved.';
+
+        const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+        const response = await chrome.tabs.sendMessage(tab.id, {
+            addedDate: addedDate, modDate: modDate, days: days, maxDays: maxDays, position: position
+        });
+
         setTimeout(() => {
           status.textContent = '';
         }, 750);
