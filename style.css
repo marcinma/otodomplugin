@@ -1,8 +1,8 @@
 .otodom-info {
   position: fixed;
-  bottom: 10px;
+  /*bottom: 10px;
   right: 10px;
-  background-color: rgb(113, 145, 194);
+  background-color: rgb(113, 145, 194);*/
   border: 3px solid #ccc;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);

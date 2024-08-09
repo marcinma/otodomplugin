@@ -2,18 +2,36 @@
 <html>
   <head>
     <title>My Test Extension Options</title>
+    <meta charset="UTF-8">
+    <style type="text/css" >
+body {
+  min-width: 300px; 
+  max-width: 100%;
+  position: relative;
+  vertical-align:middle;
+}
+input{width:85px;}
+</style >
   </head>
   <body>
-
-    <label>
+    <select id="position">
+      <option value="tl">Góra lewo</option>
+      <option value="tr">Góra prawo</option>
+      <option value="bl">Dół lewo</option>
+      <option value="br">Dół prawo</option>
+    </select>
+    <div>
+      <input type="text" id="maxDays" /> Ile dni do rozgrzania?
+    </div>
+    <div>
       <input type="checkbox" id="addedDate" /> Data dodania
-    </label>
-    <label>
+    </div>
+    <div>
       <input type="checkbox" id="modDate" /> Data Modyfikacji
-    </label>
-    <label>
+    </div>
+    <div>
       <input type="checkbox" id="days" /> Dni na portalu
-    </label>
+    </div>
     <div id="status"></div>
     <button id="save">Save</button>
 
